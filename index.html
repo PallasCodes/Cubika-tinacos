@@ -5,23 +5,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cubika - Tinacos, sisternas y más</title>
+  <title>Cubika - Tinacos, cisternas y más</title>
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/styles.css">
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <style>
+html {
+  scroll-behavior: smooth;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
+.deep-blue {
+  color: #071F63;
+}
+
+footer {
+  background: #0A1432;
+}
 </style>
 
 <body class="overflow-x-hidden">
 
-  <header class="fixed w-full top-0 ">
+  <header class="fixed w-full top-0 z-10" id="header">
     <!-- Navbar -->
     <nav class="bg-white">
       <div class="max-w-7xl mx-auto px-4">
@@ -32,22 +46,15 @@
           </a>
           <!-- Primary Navbar items -->
           <div class="hidden md:flex items-center space-x-1">
-            <a href=""
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Home</a>
-            <a href=""
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
-            <a href=""
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
-            <a href=""
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact
-              Us</a>
+            <a href="#products" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Productos</a>
+            <a href="#about" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Nosotros</a>
+            <a href="#contact" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Contacto</a>
+            <a href="#faq" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Preguntas Frecuentes</a>
           </div>
           <!-- Mobile menu button -->
           <div class="md:hidden flex items-center">
             <button class="outline-none mobile-menu-button">
-              <svg class="w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none"
-                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                stroke="currentColor">
+              <svg class="w-6 h-6 text-gray-500 hover:text-blue-500 " x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
@@ -56,14 +63,11 @@
       </div>
       <!-- mobile menu -->
       <div class="hidden mobile-menu">
-        <ul class="">
-          <li class="active"><a href="index.html"
-              class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-          <li><a href="#services"
-              class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
-          <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
-          <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact
-              Us</a></li>
+        <ul>
+          <li><a href="#products" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Productos</a></li>
+          <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Nosotros</a></li>
+          <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Contacto</a></li>
+          <a href="#faq" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Preguntas Frecuentes</a>
         </ul>
       </div>
     </nav>
@@ -73,10 +77,9 @@
   <!-- Hero -->
   <section id="hero" class="h-screen max-w-6xl mx-auto flex items-center">
     <div id="copy" class="md:mr-4 text-center md:text-left">
-      <h1 class="text-3xl md:text-5xl font-bold mb-2 md:mb-3">A tu familia y a tu hogar, dales lo mejor</h1>
-      <h2 class="md:text-xl font-medium mb-4 md:mb-6">Productos para el hogar que duran para siempre</h2>
-      <a href="#productos"
-        class="bg-blue-500 rounded-3xl shadow-lg py-3 px-6 text-white font-medium flex items-center justify-center w-min hover:bg-blue-600 mx-auto md:mx-0">
+      <h1 class="text-3xl md:text-5xl font-bold mb-2 md:mb-3 deep-blue">A tu familia y a tu hogar, dales lo mejor</h1>
+      <h2 class="md:text-xl font-medium mb-4 md:mb-6">Productos del hogar que duran para siempre</h2>
+      <a href="#productos" class="bg-blue-500 rounded-3xl shadow-lg py-3 px-6 text-white font-medium flex items-center justify-center w-min hover:bg-blue-600 mx-auto md:mx-0">
         <span class="w-max block mr-1">Ver productos</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -90,13 +93,73 @@
 
 
   <!-- Productos -->
-  <section id="productos" class="bg-green-50 py-20">
+  <section id="products" class="bg-green-50 py-20">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-center font-bold text-4xl mb-10">Productos</h2>
+      <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Productos</h2>
       <!-- grid list -->
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0">
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0 overflow-hidden">
         <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg">
+        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between" data-aos="flip-right" data-aos-duration="600">
+          <div>
+            <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
+            <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
+          </div>
+          <div>
+            <p class="text-center my-3">
+              Totalmente nuevo con 10 años de durabilidad
+            </p>
+            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+              $1,499.00
+            </span>
+          </div>
+        </li>
+        <!-- card -->
+        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between"  data-aos="flip-right" data-aos-duration="600">
+          <div>
+            <h4 class="text-center mb-2 text-2xl font-bold">Cisterna 1,500 lts</h4>
+            <img src="/assets/cisterna.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
+          </div>
+          <div>
+            <p class="text-center my-3">
+              Totalmente nuevo con 10 años de durabilidad
+            </p>
+            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+              $1,799.00
+            </span>
+          </div>
+        </li>
+        <!-- card -->
+        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between"  data-aos="flip-right" data-aos-duration="600">
+          <div>
+            <h4 class="text-center mb-2 text-2xl font-bold">Lavabo</h4>
+            <img src="/assets/lavabo.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
+          </div>
+          <div>
+            <p class="text-center my-3">
+              Reistencia total
+            </p>
+            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+              $1,199.00
+            </span>
+          </div>
+        </li>
+        <!-- card -->
+        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between"  data-aos="flip-right" data-aos-duration="600">
+          <div>
+            <h4 class="text-center mb-2 text-2xl font-bold">Inodoro</h4>
+            <img src="/assets/inodoro.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
+          </div>
+          <div>
+            <p class="text-center my-3">
+              Reistencia total
+            </p>
+            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+              $1,299.00
+            </span>
+          </div>
+        </li>
+        <!-- card -->
+        <li class="bg-white py-6 px-4 shadow-md rounded-lg"  data-aos="flip-right" data-aos-duration="600">
           <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
           <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
           <p class="text-center my-3">
@@ -107,51 +170,7 @@
           </span>
         </li>
         <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg">
-          <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
-          <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          <p class="text-center my-3">
-            Totalmente nuevo con 10 años de durabilidad
-          </p>
-          <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-            $1,499.00
-          </span>
-        </li>
-        <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg">
-          <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
-          <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          <p class="text-center my-3">
-            Totalmente nuevo con 10 años de durabilidad
-          </p>
-          <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-            $1,499.00
-          </span>
-        </li>
-        <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg">
-          <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
-          <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          <p class="text-center my-3">
-            Totalmente nuevo con 10 años de durabilidad
-          </p>
-          <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-            $1,499.00
-          </span>
-        </li>
-        <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg">
-          <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
-          <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          <p class="text-center my-3">
-            Totalmente nuevo con 10 años de durabilidad
-          </p>
-          <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-            $1,499.00
-          </span>
-        </li>
-        <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg">
+        <li class="bg-white py-6 px-4 shadow-md rounded-lg"  data-aos="flip-right" data-aos-duration="600">
           <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
           <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
           <p class="text-center my-3">
@@ -167,57 +186,91 @@
 
 
   <!-- Nosotros -->
-  <section id="nosotros" class="w-screen py-20">
+  <section id="about" class="w-screen py-20">
     <div class="max-w-6xl mx-auto px-6 md:px-0">
-      <h2 class="text-center font-bold text-4xl mb-10">Sobre nosotros</h2>
-      <p class="mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde atque, nemo similique consequatur, iure ut
-        ipsum, harum ex vel magnam sint molestias itaque ratione eum! Accusamus rem quisquam reiciendis explicabo.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolore necessitatibus beatae officiis
-        natus dignissimos? Aliquam repudiandae necessitatibus reiciendis, deserunt mollitia ab unde obcaecati
-        quaerat,
-        at debitis perferendis. Beatae, odio.
-        Nesciunt ullam odit provident laboriosam animi at magnam quos corrupti vel illum magni vitae assumenda
-        recusandae repellendus voluptatem placeat officia totam nam sapiente temporibus, mollitia, pariatur,
-        obcaecati
-        non quia. Ipsam.
-      </p>
-      <ul class="text-2xl">
-        <li>Durabilidad</li>
-        <li>Calidad</li>
-        <li>Confianza</li>
-        <li>Precios accesibles</li>
-      </ul>
+      <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Sobre nosotros</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde atque, nemo similique consequatur, iure ut
+          ipsum, harum ex vel magnam sint molestias itaque ratione eum! Accusamus rem quisquam reiciendis explicabo.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolore necessitatibus beatae officiis
+          natus dignissimos? Aliquam repudiandae necessitatibus reiciendis, deserunt mollitia ab unde obcaecati
+          quaerat,
+          at debitis perferendis. Beatae, odio.
+          Nesciunt ullam odit provident laboriosam animi at magnam quos corrupti vel illum magni vitae assumenda
+          recusandae repellendus voluptatem placeat officia totam nam sapiente temporibus, mollitia, pariatur,
+          obcaecati
+          non quia. Ipsam.
+        </p>
+        <ul class="text-xl mt-6 text-center">
+          <h3 class="text-2xl font-bold mb-1">Nosotros te ofrecemos:</h3>
+          <li>Durabilidad</li>
+          <li>Calidad</li>
+          <li>Confianza</li>
+          <li>Precios accesibles</li>
+        </ul>
+      </div>
     </div>
   </section>
 
 
   <!-- Contacto -->
-  <section id="contacto" class="w-screen py-20">
+  <section id="contact" class="w-screen pb-20 pt-4">
     <div class="max-w-6xl mx-auto px-6 md:px-0">
-      <h2 class="text-center font-bold text-4xl mb-10">Contacto</h2>
+      <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Contacto</h2>
       <div class="flex justify-center gap-8 flex-col md:flex-row">
         <div class="text-center">
-          <i class="fab fa-facebook text-4xl"></i>
+          <i class="fab fa-facebook text-4xl mb-1 text-blue-500"></i>
           <span class="block">facebook.com/CubikaTinacos</span>
         </div>
         <div class="text-center">
-          <i class="fab fa-facebook text-4xl"></i>
-          <span class="block">facebook.com/CubikaTinacos</span>
+          <i class="fab fa-whatsapp text-4xl mb-1 text-blue-500"></i>
+          <span class="block">+999 9999 9999</span>
         </div>
         <div class="text-center">
-          <i class="fab fa-facebook text-4xl"></i>
-          <span class="block">facebook.com/CubikaTinacos</span>
+          <i class="fas fa-envelope text-4xl mb-1 text-blue-500"></i>
+          <span class="block">contacto@cubikatinacos.com</span>
         </div>
       </div>
     </div>
   </section>
 
 
+  <!-- FAQ -->
+  <section id="faq" class="w-screen pb-20 pt-4">
+    <div class="max-w-6xl mx-auto px-6 md:px-0">
+      <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Preguntas Frecuentes</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="font-bold text-xl">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
+        <p class="font-bold text-xl mt-4">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
+        <p class="font-bold text-xl mt-4">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
+        <p class="font-bold text-xl mt-4">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <footer class="text-gray-300">
+    <div class="max-w-6xl text-center mx-auto py-6 md:py-8">
+      <span>Cubika Tinacos y Cisternas 2021. <br class="md:hidden"> Diseño por <a href="https://xatalweb.com" target="_blank" class="font-bold">Xatal</a></span>
+    </div>
+  </footer>
+
+
   <!-- Scripts -->
   <script src="/assets/app.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
