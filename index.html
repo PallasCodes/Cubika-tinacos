@@ -46,8 +46,8 @@ footer {
           </a>
           <!-- Primary Navbar items -->
           <div class="hidden md:flex items-center space-x-1">
-            <a href="#products" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Productos</a>
             <a href="#about" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Nosotros</a>
+            <a href="#products" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Productos</a>
             <a href="#contact" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Contacto</a>
             <a href="#faq" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Preguntas Frecuentes</a>
           </div>
@@ -64,8 +64,8 @@ footer {
       <!-- mobile menu -->
       <div class="hidden mobile-menu">
         <ul>
-          <li><a href="#products" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Productos</a></li>
           <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Nosotros</a></li>
+          <li><a href="#products" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Productos</a></li>
           <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Contacto</a></li>
           <a href="#faq" class="py-4 px-2 text-gray-700 font-semibold hover:text-blue-500 transition duration-300">Preguntas Frecuentes</a>
         </ul>
@@ -79,7 +79,7 @@ footer {
     <div id="copy" class="md:mr-4 text-center md:text-left">
       <h1 class="text-3xl md:text-5xl font-bold mb-2 md:mb-3 deep-blue">A tu familia y a tu hogar, dales lo mejor</h1>
       <h2 class="md:text-xl font-medium mb-4 md:mb-6">Productos del hogar que duran para siempre</h2>
-      <a href="#productos" class="bg-blue-500 rounded-3xl shadow-lg py-3 px-6 text-white font-medium flex items-center justify-center w-min hover:bg-blue-600 mx-auto md:mx-0">
+      <a href="#products" class="bg-blue-500 rounded-3xl shadow-lg py-3 px-6 text-white font-medium flex items-center justify-center w-min hover:bg-blue-600 mx-auto md:mx-0">
         <span class="w-max block mr-1">Ver productos</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -92,129 +92,138 @@ footer {
   </section>
 
 
+    <!-- Nosotros -->
+    <section id="about" class="w-screen py-20">
+      <div class="max-w-6xl mx-auto px-6 md:px-0">
+        <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Sobre Cubika</h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="mb-4">
+            Somos una empresa de cisternas, tinacos y muebles para el baño con sede en Apizaco, Tlaxcala y con más de 5 años en el mercado.
+          </p>
+          <p>
+            Nuestra misión es brindarte productos de calidad y alta duración a un precio sumamente accesible. 
+          </p>
+          <ul class="text-xl mt-6 text-center">
+            <h3 class="text-xl font-semibold mb-1 text-gra-900">Nosotros te ofrecemos:</h3>
+            <li>Durabilidad</li>
+            <li>Calidad</li>
+            <li>Confianza</li>
+            <li>Precios accesibles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
   <!-- Productos -->
-  <section id="products" class="bg-green-50 py-20">
+  <section id="products" class="py-20 text-center md:text-left">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Productos</h2>
       <!-- grid list -->
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0 overflow-hidden">
+      <ul class="px-4 md:px-0 overflow-hidden">
         <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between" data-aos="flip-right" data-aos-duration="600">
-          <div>
-            <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
-            <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          </div>
-          <div>
-            <p class="text-center my-3">
-              Totalmente nuevo con 10 años de durabilidad
-            </p>
-            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-              $1,499.00
-            </span>
+        <li class="flex justify-center max-w-2xl mx-auto mb-20" data-aos="flip-right" data-aos-duration="600">
+          <div class="flex flex-col md:flex-row text-center">
+            <div class="md:w-1/2 md:mr-6">
+              <img src="/assets/tinaco.png" alt="" class="w-full h-auto">
+            </div>
+            <div class="mt-4">
+              <h4 class="mb-2 text-3xl font-bold">Tinaco 1,200 lts</h4>
+              <p class="my-3 text-lg">
+                Totalmente nuevo
+                <br>
+                Altamente reforzado
+                <br>
+                Protección contra óxido y corrosión
+                <br>
+                No generá calor, olor, ni sabor al producto almacenado
+                <br>
+                10 años de garantía
+              </p>
+              <span class="inline-block mt-1 px-4 text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+                $1,499.00
+              </span>
+            </div>
           </div>
         </li>
         <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between"  data-aos="flip-right" data-aos-duration="600">
-          <div>
-            <h4 class="text-center mb-2 text-2xl font-bold">Cisterna 1,500 lts</h4>
-            <img src="/assets/cisterna.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          </div>
-          <div>
-            <p class="text-center my-3">
-              Totalmente nuevo con 10 años de durabilidad
-            </p>
-            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-              $1,799.00
-            </span>
-          </div>
-        </li>
-        <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between"  data-aos="flip-right" data-aos-duration="600">
-          <div>
-            <h4 class="text-center mb-2 text-2xl font-bold">Lavabo</h4>
-            <img src="/assets/lavabo.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          </div>
-          <div>
-            <p class="text-center my-3">
-              Reistencia total
-            </p>
-            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-              $1,199.00
-            </span>
+        <li class="flex justify-center max-w-2xl mx-auto mb-20" data-aos="flip-right" data-aos-duration="600">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 md:mr-6">
+              <img src="/assets/cisterna.png" alt="" class="w-full h-auto">
+            </div>
+            <div class="mt-4">
+              <h4 class="mb-2 text-3xl font-bold">Cisterna 1,500 lts</h4>
+              <p class="my-3 text-lg">
+                Totalmente nuevo
+                <br>
+                Altamente reforzado
+                <br>
+                Protección contra óxido y corrosión
+                <br>
+                No generá calor, olor, ni sabor al producto almacenado
+                <br>
+                10 años de garantía
+              </p>
+              <span class="inline-block mt-1 px-4 text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+                $1,799.00
+              </span>
+            </div>
           </div>
         </li>
         <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg flex flex-col justify-between"  data-aos="flip-right" data-aos-duration="600">
-          <div>
-            <h4 class="text-center mb-2 text-2xl font-bold">Inodoro</h4>
-            <img src="/assets/inodoro.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          </div>
-          <div>
-            <p class="text-center my-3">
-              Reistencia total
-            </p>
-            <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-              $1,299.00
-            </span>
+        <li class="flex justify-center max-w-2xl mx-auto mb-20" data-aos="flip-right" data-aos-duration="600">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 md:mr-6">
+              <img src="/assets/lavabo.png" alt="" class="w-full h-auto">
+            </div>
+            <div class="mt-4">
+              <h4 class="mb-2 text-3xl font-bold">Lavabo</h4>
+              <p class="my-3 text-lg">
+                Totalmente nuevo
+                <br>
+                100% cerámica
+                <br>
+                Llave monomando bajo presión
+                <br>
+                Acabado moderno
+                <br>
+                10 años de garantía
+              </p>
+              <span class="inline-block mt-1 px-4 text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+                $599.00
+              </span>
+            </div>
           </div>
         </li>
-        <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg"  data-aos="flip-right" data-aos-duration="600">
-          <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
-          <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          <p class="text-center my-3">
-            Totalmente nuevo con 10 años de durabilidad
-          </p>
-          <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-            $1,499.00
-          </span>
-        </li>
-        <!-- card -->
-        <li class="bg-white py-6 px-4 shadow-md rounded-lg"  data-aos="flip-right" data-aos-duration="600">
-          <h4 class="text-center mb-2 text-2xl font-bold">Tinaco 1,200 lts</h4>
-          <img src="/assets/tinaco.png" alt="" class="w-full h-auto md:w-3/4 mx-auto">
-          <p class="text-center my-3">
-            Totalmente nuevo con 10 años de durabilidad
-          </p>
-          <span class="block text-center text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
-            $1,499.00
-          </span>
+         <!-- card -->
+         <li class="flex justify-center max-w-2xl mx-auto mb-20" data-aos="flip-right" data-aos-duration="600">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 md:mr-6">
+              <img src="/assets/inodoro.png" alt="Inodoro Cubika" class="w-full h-auto">
+            </div>
+            <div class="mt-4">
+              <h4 class="mb-2 text-3xl font-bold">Inodoro</h4>
+              <p class="my-3 text-lg">
+                Totalmente nuevo
+                <br>
+                100% cerámica
+                <br>
+                Capacidad de 4lt por descarga
+                <br>
+                No mantiene olores
+                <br>
+                10 años de garantía
+              </p>
+              <span class="inline-block mt-1 px-4 text-2xl bg-blue-500 rounded-3xl py-2 text-white font-bold">
+                $899.00
+              </span>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </section>
-
-
-  <!-- Nosotros -->
-  <section id="about" class="w-screen py-20">
-    <div class="max-w-6xl mx-auto px-6 md:px-0">
-      <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Sobre nosotros</h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde atque, nemo similique consequatur, iure ut
-          ipsum, harum ex vel magnam sint molestias itaque ratione eum! Accusamus rem quisquam reiciendis explicabo.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolore necessitatibus beatae officiis
-          natus dignissimos? Aliquam repudiandae necessitatibus reiciendis, deserunt mollitia ab unde obcaecati
-          quaerat,
-          at debitis perferendis. Beatae, odio.
-          Nesciunt ullam odit provident laboriosam animi at magnam quos corrupti vel illum magni vitae assumenda
-          recusandae repellendus voluptatem placeat officia totam nam sapiente temporibus, mollitia, pariatur,
-          obcaecati
-          non quia. Ipsam.
-        </p>
-        <ul class="text-xl mt-6 text-center">
-          <h3 class="text-2xl font-bold mb-1">Nosotros te ofrecemos:</h3>
-          <li>Durabilidad</li>
-          <li>Calidad</li>
-          <li>Confianza</li>
-          <li>Precios accesibles</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
 
   <!-- Contacto -->
   <section id="contact" class="w-screen pb-20 pt-4">
@@ -222,16 +231,12 @@ footer {
       <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Contacto</h2>
       <div class="flex justify-center gap-8 flex-col md:flex-row">
         <div class="text-center">
-          <i class="fab fa-facebook text-4xl mb-1 text-blue-500"></i>
-          <span class="block">facebook.com/CubikaTinacos</span>
-        </div>
-        <div class="text-center">
           <i class="fab fa-whatsapp text-4xl mb-1 text-blue-500"></i>
-          <span class="block">+999 9999 9999</span>
+          <span class="block">246 155 5498</span>
         </div>
         <div class="text-center">
           <i class="fas fa-envelope text-4xl mb-1 text-blue-500"></i>
-          <span class="block">contacto@cubikatinacos.com</span>
+          <span class="block">contacubikatinacos@gmail.com</span>
         </div>
       </div>
     </div>
@@ -243,14 +248,12 @@ footer {
     <div class="max-w-6xl mx-auto px-6 md:px-0">
       <h2 class="text-center font-bold text-4xl mb-10 deep-blue">Preguntas Frecuentes</h2>
       <div class="max-w-3xl mx-auto">
-        <p class="font-bold text-xl">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
-        <p class="font-bold text-xl mt-4">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
-        <p class="font-bold text-xl mt-4">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
-        <p class="font-bold text-xl mt-4">¿Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente, quas deleniti dolor unde quos maiores perspiciatis id porro cum magni animi minus modi eveniet velit.</p>
+        <p class="font-bold text-xl">¿Hacen envíos?</p>
+        <p>Si, pero solo en el estado de Tlaxcala.</p>
+        <p class="font-bold text-xl mt-4">¿Qué métodos de pago aceptan?</p>
+        <p>Tarjeta de crédito, debito y transferencia bancaria.</p>
+        <p class="font-bold text-xl mt-4">¿Dan precios de mayoreo?</p>
+        <p>No, por el momento solo damos precios de menudeo.</p>
       </div>
     </div>
   </section>
@@ -259,7 +262,7 @@ footer {
   <!-- footer -->
   <footer class="text-gray-300">
     <div class="max-w-6xl text-center mx-auto py-6 md:py-8">
-      <span>Cubika Tinacos y Cisternas 2021. <br class="md:hidden"> Diseño por <a href="https://xatalweb.com" target="_blank" class="font-bold">Xatal</a></span>
+      <span>Cubika Tinacos y Cisternas 2022. <br class="md:hidden"> Diseño por <a href="https://xatalweb.com" target="_blank" class="font-bold">Xatal</a></span>
     </div>
   </footer>
 
